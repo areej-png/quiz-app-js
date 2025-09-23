@@ -66,5 +66,15 @@ function showResult() {
   scoreEl.innerText = `${score} / ${quizData.length}`;
 }
 
+// Events
+nextBtn.addEventListener("click", () => checkAnswer(selectedAnswer));
+restartBtn.addEventListener("click", () => {
+  currentQuestionIndex = 0;
+  score = 0;
+  resultEl.style.display = "none";
+  document.getElementById("quiz-container").style.display = "block";
+  loadQuestion();
+});
+
 
 
