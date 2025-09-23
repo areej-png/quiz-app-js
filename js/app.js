@@ -49,3 +49,17 @@ function loadQuestion() {
   nextBtn.style.display = "none"; // hide next until an answer is picked
 }
 
+function checkAnswer(selectedAnswer) {
+  if (selectedAnswer === quizData[currentQuestionIndex].correct) {
+    score++;
+  }
+  currentQuestionIndex++;
+  if (currentQuestionIndex < quizData.length) {
+    loadQuestion();
+  } else {
+    showResult();
+  }
+}
+
+
+
