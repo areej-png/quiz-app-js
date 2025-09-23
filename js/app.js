@@ -60,6 +60,11 @@ function checkAnswer(selectedAnswer) {
     showResult();
   }
 }
+function showResult() {
+  document.getElementById("quiz-container").style.display = "none";
+  resultEl.style.display = "block";
+  scoreEl.innerText = `${score} / ${quizData.length}`;
+}
 
 
 
